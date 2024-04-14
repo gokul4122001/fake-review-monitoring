@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="791" border="1" align="center" class="table table-striped thead-dark table-bordered table-hover">
+    			<tr style="background-color:#FFCC33; color:#000000;">
+				<th>#</th>
+				<th>reviewerID</th>
+				<th>asin</th>
+				<th>reviewerName</th>
+				<th>helpful</th>
+				<th>reviewText</th>
+				<th>overall</th>
+				<th>summary</th>
+				<th>unixReviewTime</th>
+				<th>reviewTime</th>
+				<th>day_diff</th>
+				<th>helpful_yes</th>
+				<th>total_vote</th>
+				<th>polarity_score</th>
+				<th>sentiment_label</th>
+				</tr>
+				{% for rs in data %}
+				<tr>
+				<td>{{loop.index}}</td>
+				<td>{{rs[0]}}</td>
+				<td>{{rs[1]}}</td>
+				<td>{{rs[2]}}</td>
+				<td>{{rs[3]}}</td>
+				<td>{{rs[4]}}</td>
+				<td>{{rs[5]}}</td>
+				<td>{{rs[6]}}</td>
+				<td>{{rs[7]}}</td>
+				<td>{{rs[8]}}</td>
+				<td>{{rs[9]}}</td>
+				<td>{{rs[10]}}</td>
+				<td>{{rs[11]}}</td>
+				<td>{{rs[12]}}</td>
+				<td>{{rs[13]}}</td>
+				</tr>
+				{% endfor %}
+				</table>
+</body>
+</html>
